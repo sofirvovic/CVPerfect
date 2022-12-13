@@ -1,4 +1,4 @@
-@import "../lib/bootstrap/css/bootstrap.min.css";
+@import "/lib/bootstrap/css/bootstrap.min.css";
 
 $first-color: #333333;
 $first-hover-color: #0dba86;
@@ -640,7 +640,7 @@ footer {
         background: $first-hover-color;
     }
 }
-
+ 
 
 .login-register {
     position: fixed;

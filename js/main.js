@@ -89,16 +89,7 @@ formClose.forEach(fc => {
   })
 })
 
-signUp.addEventListener("click", ()=> {
-  loginForm.style.display = "none";
-  registerForm.style.display = "block";
-})
 
-
-loginIn.addEventListener("click", ()=> {
-  loginForm.style.display = "block";
-  registerForm.style.display = "none";
-})
 
 //Author popup show
 let authorPopup = document.querySelector(".author-popup");

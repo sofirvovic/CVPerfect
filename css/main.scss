@@ -1,5 +1,3 @@
-@import "/lib/bootstrap/css/bootstrap.min.css";
-
 $first-color: #333333;
 $first-hover-color: #0dba86;
 $second-hover-color: #0d98ba;
@@ -713,12 +711,12 @@ footer {
 
 .author-page {
     min-height: 100vh;
-    background-image: url(img/aboutBg.jpg); 
+    background-image: url("/img/aboutBg.jpg"); 
     color: $white-text;
     padding: 100px 2px;
 
     p {
-        font-size: 20px;
+        font-size: 22px; 
     }
 
     img {

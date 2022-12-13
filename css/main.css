@@ -798,13 +798,13 @@ footer .footerBottom {
 
 .author-page {
   min-height: 100vh;
-  background-image: url(img/aboutBg.jpg);
+  background-image: url("/img/aboutBg.jpg");
   color: #f0f0f0;
   padding: 100px 2px;
 }
 
 .author-page p {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .author-page img {

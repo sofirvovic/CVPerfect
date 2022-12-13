@@ -1,7 +1,7 @@
 
 (function ( $ ) { 
     "use strict";
-
+        
 // Initiate the wowjs animation library
 new WOW().init();
 
@@ -99,17 +99,17 @@ setTimeout(()=>{
 },3000)
 
 setTimeout(()=>{
-  authorPopup.style.right = "-100%";
+  authorPopup.style.right = "-100%";  
 },6000)
 
 // Dynamic content - instagram feed
 let instaImgs = [
-  "../img/insta/1.jpg",
-  "../img/insta/2.jpg",
-  "../img/insta/3.jpg",
-  "../img/insta/4.jpg",
-  "../img/insta/5.jpg",
-  "../img/insta/6.jpg",
+  "img/insta/1.jpg",
+  "img/insta/2.jpg",
+  "img/insta/3.jpg",
+  "img/insta/4.jpg",
+  "img/insta/5.jpg",
+  "img/insta/6.jpg",
 ];
 
 let instaFeed = document.querySelector(".insta-feed");

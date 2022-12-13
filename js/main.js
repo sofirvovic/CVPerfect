@@ -70,9 +70,7 @@ let formOpen = document.querySelectorAll(".form-open"),
     formClose = document.querySelectorAll(".form-close"),
     form = document.querySelector(".login-register"),
     loginForm = document.querySelector(".login-form"),
-    registerForm = document.querySelector(".register-form"),
-    signUp = document.querySelector(".sign-up"),
-    loginIn = document.querySelector(".login");
+    registerForm = document.querySelector(".register-form");
 
 
 formOpen.forEach(fs => {
@@ -119,3 +117,50 @@ for (let i = 0; i <instaImgs.length; i++) {
 }
 
 // Form validation
+
+let regForm = document.querySelector("#reg-form");
+let regFormName = document.querySelector("#name");
+let regFormLast = document.querySelector("#last-name");
+let regFormEmail = document.querySelector("#email");
+let regFormPass = document.querySelector("#password");
+let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+let passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+
+
+
+regForm.addEventListener("submit", (e)=> {
+
+  let errors = 0;
+  let errorMsgs = document.querySelectorAll(".error-text");
+  errorMsgs.forEach(errMsg => {
+    errMsg.innerHTML = " ";
+  })
+
+  if(regFormName.value == '' || regFormName.value == null) {
+    document.querySelector(".name-error").innerHTML = "Name cant be empty";
+    errors++;
+  }
+
+  if(regFormLast.value == '' || regFormName.value == null) {
+    document.querySelector(".lastname-error").innerHTML = "Last name cant be empty";
+    errors++;
+  }
+
+  if(regFormEmail.value == '' || regFormEmail.value == null) {
+    document.querySelector(".email-error").innerHTML = "Email field cant be empty";
+    errors++;
+    } else if(!regFormEmail.value.match(validRegex)) {
+    document.querySelector(".email-error").innerHTML = "Email is not valid!";
+    errors++;
+  }
+
+  if(!regFormPass.value.match(passRegex)) {
+    document.querySelector(".password-error").innerHTML = "Password must be between 6 to 15 characters which contain at least one numeric digit and a special character";
+    errors++;
+  } 
+  
+  if(errors > 0) {
+    e.preventDefault();
+  }
+
+});

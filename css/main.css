@@ -751,15 +751,20 @@ footer .footerBottom {
   padding: 10px;
   background-color: #f0f0f0;
   border-radius: 6px;
-  height: 500px;
+  height: 550px;
 }
 
 .login-register .form-container input {
   width: 100%;
-  margin-bottom: 20px;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
+}
+
+.login-register .form-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: red;
 }
 
 .login-register .form-container .login-form {

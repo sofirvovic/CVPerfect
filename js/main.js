@@ -1,3 +1,4 @@
+
 (function ( $ ) { 
     "use strict";
 
@@ -119,4 +120,3 @@ for (let i = 0; i <instaImgs.length; i++) {
 }
 
 // Form validation
-

@@ -28,9 +28,6 @@ caruCarousel.find(".carousel-inner").children(".carousel-item").each(function(in
 
 }( jQuery ));
 
-
-let homeFlag = false;
-
 if(window.location.pathname === "/index.html") {
   homeFlag = true;
 
@@ -77,7 +74,6 @@ mobileMenuActivator.forEach(el =>{
 let formOpen = document.querySelectorAll(".form-open"),
     formClose = document.querySelectorAll(".form-close"),
     form = document.querySelector(".login-register"),
-    loginForm = document.querySelector(".login-form"),
     registerForm = document.querySelector(".register-form");
 
 
@@ -90,12 +86,9 @@ formOpen.forEach(fs => {
 formClose.forEach(fc => {
   fc.addEventListener("click", ()=> {
     form.style.display = "none";
-    loginForm.style.display = "none";
     registerForm.style.display = "block";
   })
 })
-
-
 
 //Author popup show
 let authorPopup = document.querySelector(".author-popup");
@@ -172,4 +165,5 @@ regForm.addEventListener("submit", (e)=> {
   }
 
 });
+
 

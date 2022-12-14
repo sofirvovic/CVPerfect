@@ -249,6 +249,10 @@ header nav a:hover {
   margin-bottom: 20px;
 }
 
+#caru span {
+  color: #f0f0f0;
+}
+
 @media (min-width: 1024px) {
   #caru h1 {
     font-size: 48px;
@@ -576,7 +580,8 @@ section#pricing .icon i {
 }
 
 #testimonials {
-  padding: 50px 0;
+  padding: 70px 0;
+  padding: 0 16px;
 }
 
 #testimonials .col-md-9 {
@@ -618,6 +623,23 @@ section#pricing .icon i {
 
 #testimonials .author {
   padding-right: 30px;
+}
+
+#testimonials img {
+  width: 150px;
+}
+
+#testimonials h4 {
+  min-height: 200px;
+}
+
+@media (min-width: 1024px) {
+  #testimonials {
+    padding: 0;
+  }
+  #testimonials img {
+    width: auto;
+  }
 }
 
 #instagram {
@@ -666,11 +688,21 @@ footer a span {
   color: #f0f0f0;
 }
 
+footer .links {
+  margin: 20px 0 !important;
+}
+
 footer .links a:hover {
   color: #0dba86;
 }
 
-footer .footerRow {
+@media (min-width: 768px) {
+  footer .links {
+    margin: 0 !important;
+  }
+}
+
+footer .footer-row {
   padding: 35px 0 25px;
 }
 

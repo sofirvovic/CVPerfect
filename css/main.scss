@@ -242,6 +242,10 @@ header {
         margin-bottom: 20px;
     }
 
+    span {
+        color: $white-text;
+    }
+
     @media (min-width: 1024px) {
         h1 {
             font-size: 48px;
@@ -519,7 +523,9 @@ section#pricing {
 }
 
 #testimonials {
-    padding: 50px 0;
+    padding: 70px 0;
+    padding: 0 16px;
+    
     .col-md-9 {
         padding-left: 39px;
     }
@@ -551,6 +557,26 @@ section#pricing {
     .author {
         padding-right: 30px;
     }
+
+    img {
+        width: 150px;
+    }
+
+    h4 {
+        min-height: 200px
+    };
+
+    @media (min-width: 1024px) {
+        
+        padding: 0;
+
+        
+        img {
+            width: auto;
+        }
+    }
+
+
 }
 
 #instagram {
@@ -592,10 +618,25 @@ footer {
             color: $white-text;
         }
     }
-    .links a:hover {
-        color: $first-hover-color;
+
+    .links  {
+
+        a:hover {
+            color: $first-hover-color;
+        }
+
+        margin: 20px 0 !important;
     }
-    .footerRow {
+
+    @media (min-width: 768px) {  
+        .links  {
+    
+            margin:0 !important;
+        }
+    }
+
+
+    .footer-row {
         padding: 35px 0 25px;
     }
     h6 {

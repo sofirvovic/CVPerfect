@@ -1,4 +1,3 @@
-
 (function ( $ ) { 
     "use strict";
         
@@ -28,6 +27,15 @@ caruCarousel.find(".carousel-inner").children(".carousel-item").each(function(in
 });
 
 }( jQuery ));
+
+
+let homeFlag = false;
+
+if(window.location.pathname === "/index.html") {
+  homeFlag = true;
+
+  console.log(homeFlag);
+}
 
 // Active menu element
 let menuElements = document.querySelectorAll(".nav-el");
@@ -164,3 +172,4 @@ regForm.addEventListener("submit", (e)=> {
   }
 
 });
+

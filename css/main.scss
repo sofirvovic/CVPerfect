@@ -725,10 +725,6 @@ footer {
             color: red;
         }
 
-        .login-form {
-            display: none;
-        }
-
         .form-close {
             font-size: 20px;
             position: absolute;
@@ -736,6 +732,13 @@ footer {
             right: 1rem;
             cursor: pointer;
         }
+    }
+
+    .success {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     @media (min-width: 1024px) {  

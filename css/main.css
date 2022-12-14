@@ -804,16 +804,26 @@ footer .footerBottom {
   color: red;
 }
 
-.login-register .form-container .login-form {
-  display: none;
-}
-
 .login-register .form-container .form-close {
   font-size: 20px;
   position: absolute;
   top: 1rem;
   right: 1rem;
   cursor: pointer;
+}
+
+.login-register .success {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 1024px) {

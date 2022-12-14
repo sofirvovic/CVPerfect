@@ -28,11 +28,6 @@ caruCarousel.find(".carousel-inner").children(".carousel-item").each(function(in
 
 }( jQuery ));
 
-if(window.location.pathname === "/index.html") {
-  homeFlag = true;
-
-  console.log(homeFlag);
-}
 
 // Active menu element
 let menuElements = document.querySelectorAll(".nav-el");
@@ -74,12 +69,15 @@ mobileMenuActivator.forEach(el =>{
 let formOpen = document.querySelectorAll(".form-open"),
     formClose = document.querySelectorAll(".form-close"),
     form = document.querySelector(".login-register"),
-    registerForm = document.querySelector(".register-form");
+    registerForm = document.querySelector(".register-form"),
+    formSuccess = document.querySelector(".success");
 
 
 formOpen.forEach(fs => {
   fs.addEventListener("click", ()=> {
     form.style.display = "flex";
+    formSuccess.style.display = "none";
+    clearForm()
   })
 })
 
@@ -128,6 +126,14 @@ let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9
 let passRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 
 
+function clearForm(){
+  regFormName.value = "";
+  regFormLast.value = "";
+  regFormEmail.value = "";
+  regFormPass.value = "";
+}
+
+
 
 regForm.addEventListener("submit", (e)=> {
 
@@ -159,10 +165,17 @@ regForm.addEventListener("submit", (e)=> {
     document.querySelector(".password-error").innerHTML = "Password must be between 6 to 15 characters which contain at least one numeric digit and a special character";
     errors++;
   } 
-  
-  if(errors > 0) {
-    e.preventDefault();
+  if(errors == 0) {
+    registerForm.style.display = "none";
+    formSuccess.style.display = "flex";
+    clearForm();
+
+    setTimeout(()=>{
+      form.style.display = "none";  
+    },3000)
   }
+
+  e.preventDefault();
 
 });
 
